@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/KoNyaShKa\/Documents\/MiniProjects\/Positions\/sass\/style\.scss}line{font-family:\000031}}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/KoNyaShKa\/Documents\/MiniProjects\/Positions\/sass\/style\.scss}line{font-family:\000036}}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 300px));
+  /*Если блоков немного, то можно использовать auto-fit, нужен для того, чтобы блоки занимали все пространство, что имеется, с auto-fill так не получится, Блоки просто займут место, но если останется свободное, то они его не заполнят*/
+  grid-template-rows: repeat(3, minmax(100px, auto));
+  /*Если у контейнера не будет контента, что будет вылазить за рамки, то он будет занимать минимальную ширину*/
+  grid-auto-rows: minmax(100px, auto);
+  /*Делать асвтоматической максиммальную величину нужно делать в тех случаях, когда неизвестно, сколько контента будет помещаться*/
+  gap: 10px;
+  grid-auto-flow: column;
+  /*Неявный грид будет расти в виде новой строки, она будет занимать свободное место справа*/ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/KoNyaShKa\/Documents\/MiniProjects\/Positions\/sass\/style\.scss}line{font-family:\0000316}}
+.grid-elem {
+  background-color: #010160;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 26px;
+  border: 1px solid #000;
+  border-radius: 4px; }
